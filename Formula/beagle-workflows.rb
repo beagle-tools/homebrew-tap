@@ -13,11 +13,11 @@ class BeagleWorkflows < Formula
 
   on_arm do
     url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-workflows-v0.1.0/beagle-workflows-aarch64-apple-darwin.tar.gz"
-    sha256 "4b97004106d078b6fdb4101fb98315e0465b910ef581ca642fbb3c47f2c1e237"
+    sha256 "964c57c8365d9b8fc850c2f59ff11041f1f00e988c96820140779fcce6d0cf51"
   end
   on_intel do
     url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-workflows-v0.1.0/beagle-workflows-x86_64-apple-darwin.tar.gz"
-    sha256 "e897f48a6e2cc2aa35cac5181fbd10912386360db27e11fae6bbcf16285f9674"
+    sha256 "fdccaa5c7272ccedd984c9e03e8f3843376c3f94c1091bede3656d918c53525a"
   end
 
   def install
