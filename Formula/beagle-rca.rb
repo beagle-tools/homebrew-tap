@@ -6,26 +6,30 @@
 class BeagleRca < Formula
   desc "Root-cause analysis workspaces for incidents, in the terminal"
   homepage "https://github.com/beagle-tools/beagle-tools/tree/main/rca"
-  version "0.29.2"
+  version "0.30.0"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-rca-v0.29.2/beagle-rca-aarch64-apple-darwin.tar.gz"
-      sha256 "06305960061c4237805e1536f9b20f689c72509794f40e828a1ce0b0d999c149"
+      url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-rca-v0.30.0/beagle-rca-aarch64-apple-darwin.tar.gz"
+      sha256 "245fb0e8089dc09269a4eb3f9ac32139fe6b507d809aee1a6f6a6ac9dcb1bf3c"
     end
     on_intel do
-      url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-rca-v0.29.2/beagle-rca-x86_64-apple-darwin.tar.gz"
-      sha256 "f1440c5a03b522dc281aa0fe66ba594b3289175f4e53dfbb6a7a5b9526e53c31"
+      url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-rca-v0.30.0/beagle-rca-x86_64-apple-darwin.tar.gz"
+      sha256 "5193a1c016ac4a90532df0cd05e8d66fae4cb505335c5e0f7f96c509537705c1"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-rca-v0.29.2/beagle-rca-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "c0529384d4ce3f6f7b38df897e407588b74c5dfe7344bcf42034aadfb8aec7c7"
+      url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-rca-v0.30.0/beagle-rca-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "4493565b443b705019165a013ac74dabf715c3f1b307f26b0013dfbaaf8305f1"
     end
   end
+
+  # The unified `beagle` command (formula `beagle`) installs a `beagle` too
+  # and replaces this CLI as `beagle rca …`.
+  conflicts_with "beagle", because: "both install a `beagle` binary"
 
   def install
     bin.install "beagle", "beagle-agentd"
