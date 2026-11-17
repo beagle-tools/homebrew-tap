@@ -6,18 +6,18 @@
 class BeagleWorkflows < Formula
   desc "Local agent scheduler: agentd daemon, agentctl CLI and agenttop TUI"
   homepage "https://github.com/beagle-tools/beagle-tools/tree/main/workflows"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   depends_on :macos
 
   on_arm do
-    url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-workflows-v0.1.1/beagle-workflows-aarch64-apple-darwin.tar.gz"
-    sha256 "83a77f58f32fb35aeb3c89fdfd433470e7b5b1d111b2dee85e92491c57578f4a"
+    url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-workflows-v0.1.2/beagle-workflows-aarch64-apple-darwin.tar.gz"
+    sha256 "4d0becc7b758d92c22b66abacc9ee89d53aada7d37015ab671476f8de5a47763"
   end
   on_intel do
-    url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-workflows-v0.1.1/beagle-workflows-x86_64-apple-darwin.tar.gz"
-    sha256 "00dacd207d490c28c1bff736d0c970360cee519af1e2139795dffad2cf871dca"
+    url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-workflows-v0.1.2/beagle-workflows-x86_64-apple-darwin.tar.gz"
+    sha256 "8dcd98c7971b36ba3dc22ff1f49de7b4eb8e9fea388aa5b23e1838761959e87f"
   end
 
   def install
