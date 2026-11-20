@@ -6,24 +6,24 @@
 class BeagleRca < Formula
   desc "Root-cause analysis workspaces for incidents, in the terminal"
   homepage "https://github.com/beagle-tools/beagle-tools/tree/main/rca"
-  version "0.33.3"
+  version "0.33.4"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-rca-v0.33.3/beagle-rca-aarch64-apple-darwin.tar.gz"
-      sha256 "6216938118a38cca1d4fb85ea8e54e6d700d31909b89b932594141d111df9657"
+      url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-rca-v0.33.4/beagle-rca-aarch64-apple-darwin.tar.gz"
+      sha256 "dddda0a0a02176731af2bd6e2813a6f22a83dd24fc71a79f6bc1198db8139355"
     end
     on_intel do
-      url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-rca-v0.33.3/beagle-rca-x86_64-apple-darwin.tar.gz"
-      sha256 "426ba25e7a0a08d9ebdd3efbc7ed63038e666a5b2b53cf833fedf7be7b7c5095"
+      url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-rca-v0.33.4/beagle-rca-x86_64-apple-darwin.tar.gz"
+      sha256 "f96ce920dda19faa3bbecb3adcf894f2d18ec458e0920dec4e4a6848f41fd2ec"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-rca-v0.33.3/beagle-rca-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "986fc958edb260d5827c1c02d292ecdb72c5878578d1b656e399346eec42dec0"
+      url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-rca-v0.33.4/beagle-rca-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "20f88acd781e2b208c7633a7d92c32a8f894771130121a3c3aa886d086ef25ff"
     end
   end
 
