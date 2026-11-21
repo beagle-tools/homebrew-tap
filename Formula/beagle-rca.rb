@@ -6,24 +6,30 @@
 class BeagleRca < Formula
   desc "Root-cause analysis workspaces for incidents, in the terminal"
   homepage "https://github.com/beagle-tools/beagle-tools/tree/main/rca"
-  version "0.34.0"
+  version "0.34.1"
   license "Apache-2.0"
+
+  # Replaced by the unified `beagle` formula (`beagle rca …`). Deleted one
+  # release after this deprecation shipped.
+  deprecate! date: "2026-11-20",
+             because: "is replaced by the beagle formula: " \
+                      "brew uninstall beagle-rca && brew install beagle-tools/tap/beagle"
 
   on_macos do
     on_arm do
-      url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-rca-v0.34.0/beagle-rca-aarch64-apple-darwin.tar.gz"
-      sha256 "ba7f7bfe43c04d3d4df2e6859a02b6316b36dc02583480086ae479814eb5d64b"
+      url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-rca-v0.34.1/beagle-rca-aarch64-apple-darwin.tar.gz"
+      sha256 "2c5b8e3e61b000a0553e81e22d3f8ca5b88dd40bc1d98ffd7c107adfe5701aa0"
     end
     on_intel do
-      url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-rca-v0.34.0/beagle-rca-x86_64-apple-darwin.tar.gz"
-      sha256 "a158e4645e447aef1221c85f9301c4b6d6fd60344436a419716cc70b5c7c3025"
+      url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-rca-v0.34.1/beagle-rca-x86_64-apple-darwin.tar.gz"
+      sha256 "5a27e6c19d1571fc4ab20fb9c1b73e1798e9705a8ecaa9afd6d79eb8c1189952"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-rca-v0.34.0/beagle-rca-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "a2b52cae137bd1a3de33df6dac35741220c3e91a2c305f77eebbc8f207786a58"
+      url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-rca-v0.34.1/beagle-rca-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "bb385abe7666eb8071845584952e4380e55b11650b0be58c04582538830bfbb6"
     end
   end
 
