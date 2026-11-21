@@ -6,24 +6,24 @@
 class Beagle < Formula
   desc "Developer tools in one command: RCA workspaces, PR recaps, agent tracking, more"
   homepage "https://github.com/beagle-tools/beagle-tools/tree/main/cli"
-  version "0.7.1"
+  version "0.7.2"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-cli-v0.7.1/beagle-cli-aarch64-apple-darwin.tar.gz"
-      sha256 "2a2a96f17ed67640f0c541e1bbdf63903600cc032043361709c9830bc54e5bb4"
+      url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-cli-v0.7.2/beagle-cli-aarch64-apple-darwin.tar.gz"
+      sha256 "9fec3fc8a010bdb2265d8c63e5f08b58005da8fed7925a578f2d7256934dac43"
     end
     on_intel do
-      url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-cli-v0.7.1/beagle-cli-x86_64-apple-darwin.tar.gz"
-      sha256 "a1720345e21547ab629a313edb374d8c0d6895af88ba21a697dfb63617863ba0"
+      url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-cli-v0.7.2/beagle-cli-x86_64-apple-darwin.tar.gz"
+      sha256 "f5ceabdb56b6f42353559586ba4578b4af671bb31a075b1fd68826de5f671154"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-cli-v0.7.1/beagle-cli-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "b71f247f7d21a9a3c55327961a35bdc88fc84fd5e8a1f331acca73774da467a7"
+      url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-cli-v0.7.2/beagle-cli-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "f9d193b9b2c79df38d4cb0a0bdef679bb6671f8e985748c664776fcd807e3715"
     end
   end
 
