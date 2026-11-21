@@ -6,18 +6,24 @@
 class BeagleWorkflows < Formula
   desc "Local agent scheduler: agentd daemon, agentctl CLI and agenttop TUI"
   homepage "https://github.com/beagle-tools/beagle-tools/tree/main/workflows"
-  version "0.4.0"
+  version "0.4.1"
   license "Apache-2.0"
+
+  # Replaced by the unified `beagle` formula (`beagle agent …`). Deleted one
+  # release after this deprecation shipped.
+  deprecate! date: "2026-11-20",
+             because: "is replaced by the beagle formula (`beagle agent`): " \
+                      "brew uninstall beagle-workflows && brew install beagle-tools/tap/beagle"
 
   depends_on :macos
 
   on_arm do
-    url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-workflows-v0.4.0/beagle-workflows-aarch64-apple-darwin.tar.gz"
-    sha256 "9d9f046b6484df630baed6a76a15942ac571a3b79e938508eeef184d8298ab3b"
+    url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-workflows-v0.4.1/beagle-workflows-aarch64-apple-darwin.tar.gz"
+    sha256 "0dea209f4a7fa4991adcc8338fe003fab8ddcee05b5bf232568a0f90644a83c4"
   end
   on_intel do
-    url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-workflows-v0.4.0/beagle-workflows-x86_64-apple-darwin.tar.gz"
-    sha256 "bf338a73ba6137ea51d1af21caff182daaacccb367977f88f0b6d087e538f93e"
+    url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-workflows-v0.4.1/beagle-workflows-x86_64-apple-darwin.tar.gz"
+    sha256 "63e1f16b55e3c315cadb1c7987074fc0fe2005235d88e6fed57c1d770858464e"
   end
 
   def install
@@ -25,22 +31,18 @@ class BeagleWorkflows < Formula
   end
 
   # agentd runs as a per-user launchd agent (label com.agentd.daemon).
-  # `agentctl daemon install` renders the embedded plist pointing at
-  # HOMEBREW_PREFIX/bin, so the unit survives upgrades. A running daemon
-  # keeps the OLD binary after an upgrade, so restarting is part of every
-  # upgrade.
+  # This formula is deprecated: the caveats point at its replacement.
   def caveats
     <<~EOS
-      agentd is a daemon. To run it at login under launchd:
+      beagle-workflows is deprecated: `beagle agent` in the beagle formula
+      replaces agentctl, agenttop and agentd. Switch with:
 
-        agentctl daemon install
+        brew uninstall beagle-workflows
+        brew install beagle-tools/tap/beagle
+        beagle agent daemon install   # repoints launchd at `beagle agent daemon run`
 
-      After every `brew upgrade beagle-workflows`, restart the daemon so it
-      runs the new binary:
-
-        agentctl daemon restart
-
-      Logs: ~/Library/Logs/agentd/agentd.{out,err}.log
+      Until then, restart the daemon after every upgrade so it runs the new
+      binary: agentctl daemon restart
     EOS
   end
 
