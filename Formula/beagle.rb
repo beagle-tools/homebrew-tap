@@ -1,29 +1,29 @@
-# Homebrew formula for the unified `beagle` command (cli/). TEMPLATE: release
+# Homebrew formula for the unified `beagle` command (beagle/). TEMPLATE: release
 # CI (scripts/release/homebrew.sh) fills the @…@ placeholders with the
 # release version and each tarball's sha256, and pushes the result to
 # beagle-tools/homebrew-tap as Formula/beagle.rb. Edit this file, never the
 # tap copy — the next release overwrites it.
 class Beagle < Formula
   desc "Developer tools in one command: RCA workspaces, PR recaps, agent tracking, more"
-  homepage "https://github.com/beagle-tools/beagle-tools/tree/main/cli"
-  version "0.7.2"
+  homepage "https://github.com/beagle-tools/beagle-tools/tree/main/beagle"
+  version "0.7.4"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-cli-v0.7.2/beagle-cli-aarch64-apple-darwin.tar.gz"
-      sha256 "9fec3fc8a010bdb2265d8c63e5f08b58005da8fed7925a578f2d7256934dac43"
+      url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-cli-v0.7.4/beagle-cli-aarch64-apple-darwin.tar.gz"
+      sha256 "7d5b34a41e324050437dc0fafe7cd48b9f85bc94564bf4dfb9dada6a89a4e469"
     end
     on_intel do
-      url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-cli-v0.7.2/beagle-cli-x86_64-apple-darwin.tar.gz"
-      sha256 "f5ceabdb56b6f42353559586ba4578b4af671bb31a075b1fd68826de5f671154"
+      url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-cli-v0.7.4/beagle-cli-x86_64-apple-darwin.tar.gz"
+      sha256 "17caf59fc6eea38a0a1f1aa10641d0aa77527de5a065bf4d8f5e1472e97a98e6"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-cli-v0.7.2/beagle-cli-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "f9d193b9b2c79df38d4cb0a0bdef679bb6671f8e985748c664776fcd807e3715"
+      url "https://github.com/beagle-tools/beagle-tools/releases/download/beagle-cli-v0.7.4/beagle-cli-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "c96d1b80957f390d96039fa0f03a95dcd606f2014cdfe4e290d583759e5c170e"
     end
   end
 
